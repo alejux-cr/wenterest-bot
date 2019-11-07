@@ -1,6 +1,6 @@
 # Wenterest Bot
 
-Bot created using Node.js  to communicate about different interests/services a person might have/need
+Bot created using Node.js and Alexa to communicate about different interests/services a person might have/need 
 
 ## Requirements
 
@@ -15,7 +15,7 @@ WIT_TOKEN=PASTE_WIT_TOKEN_HERE
 ```
 
 ## Installation
-```bash
+```js
 npm install
 ```
 
