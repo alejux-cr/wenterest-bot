@@ -6,17 +6,21 @@ const logger = require('morgan');
 const DomainService = require('./services/DomainService');
 
 const indexRouter = require('./routes/index');
+const slackRouter = require('./routes/bots/slack');
 
 module.exports = (config) => {
   const app = express();
 
-  const domainService = new DomainService(config.interests);
+  const domainService = new DomainService(config.domains);
 
   // view engine setup
   app.set('views', path.join(__dirname, 'views'));
   app.set('view engine', 'ejs');
 
   app.use(logger('dev'));
+
+  app.use('/bots/slack', slackRouter({ domainService, config }));
+
   app.use(express.json());
   app.use(express.urlencoded({ extended: false }));
   app.use(express.static(path.join(__dirname, 'public')));
