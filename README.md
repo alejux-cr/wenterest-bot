@@ -7,7 +7,7 @@ Bot created using Node.js with Slack & Alexa to communicate about different inte
 Node.js & npm 
 
 ## Important 
-Rename .env-sample file to .env and get the required credentials: 
+Rename .env-sample file to .env and get the required credentials.
 
 ## Installation
 ```js

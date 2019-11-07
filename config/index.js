@@ -3,7 +3,7 @@ const path = require('path');
 require('dotenv').config();
 
 module.exports = {
-  interest: {
+  domains: {
     datafile: path.join(__dirname, '../data/domains.json'),
     id: '',
     name: '',
