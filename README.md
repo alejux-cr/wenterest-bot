@@ -1,6 +1,6 @@
 # Wenterest Bot
 
-Bot created using Node.js with Slack & Alexa to communicate about different interests/services a person might have/need 
+Bot created using Node.js with Slack & Alexa to communicate about different interests/services a person might have/need using Wit.ai for NLP
 
 ## Requirements
 
