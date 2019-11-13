@@ -9,6 +9,8 @@
   "dependencies": {
     "@slack/events-api": "^2.3.0",
     "@slack/web-api": "^5.4.0",
+    "ask-sdk-core": "^2.7.0",
+    "ask-sdk-model": "^1.23.1",
     "debug": "~2.6.9",
     "dotenv": "^8.0.0",
     "ejs": "~2.5.7",
