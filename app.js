@@ -5,6 +5,7 @@ const logger = require('morgan');
 
 const DomainService = require('./services/DomainService');
 const WitService = require('./services/WitService');
+const SessionService = require('./services/SessionService');
 
 const indexRouter = require('./routes/index');
 const slackRouter = require('./routes/bots/slack');
@@ -14,6 +15,7 @@ module.exports = (config) => {
 
   const domainService = new DomainService(config.domains);
   const witService = new WitService(config.wit.token);
+  const sessionService = new SessionService();
 
   // view engine setup
   app.set('views', path.join(__dirname, 'views'));
@@ -21,7 +23,12 @@ module.exports = (config) => {
 
   app.use(logger('dev'));
 
-  app.use('/bots/slack', slackRouter({ domainService, witService, config }));
+  app.use('/bots/slack', slackRouter({
+    domainService,
+    witService,
+    sessionService,
+    config
+  }));
 
   app.use(express.json());
   app.use(express.urlencoded({ extended: false }));
